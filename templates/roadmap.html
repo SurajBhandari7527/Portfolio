@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Bhandari | Learning Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    {% include 'sidebar.html' %}
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+        <header>
+            <div class="profile">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" onerror="this.src='https://ui-avatars.com/api/?name=Suraj+Bhandari&background=3b82f6&color=fff'" alt="Suraj Bhandari">
+                <span style="font-size: 0.9rem; font-weight: 500;">Suraj Bhandari</span>
+            </div>
+        </header>
+
+        <div class="roadmap-container" id="main-roadmap">
+            <div class="page-header">
+                <h1>LEARNING ROADMAP</h1>
+                <p>My journey through Machine Learning, Data Analytics, and Deep Learning milestones.</p>
+            </div>
+            <div class="timeline" id="timeline-container">
+                <div style="text-align:center; color: var(--text-muted);">Loading roadmap data...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAILS PANEL OVERLAY -->
+    <div class="details-overlay" id="details-panel">
+        <button class="close-btn" onclick="closeDetails()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="panel-header" id="panel-header"></div>
+        <div class="details-content" id="details-content"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/roadmap.js') }}"></script>
+</body>
+</html>

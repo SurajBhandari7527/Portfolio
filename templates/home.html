@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Bhandari | Data Scientist & Data Analyst Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    {% include 'sidebar.html' %}
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+        <header>
+            <div class="profile">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" onerror="this.src='https://ui-avatars.com/api/?name=Suraj+Bhandari&background=3b82f6&color=fff'" alt="Suraj Bhandari">
+                <span style="font-size: 0.9rem; font-weight: 500;">Suraj Bhandari</span>
+            </div>
+        </header>
+
+        <div class="scroll-container">
+            <!-- HERO SECTION -->
+            <section class="hero-section" id="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="role-badge"><i class="fa-solid fa-circle-dot"></i> Data Scientist & Data Analyst</span>
+                        <h1>Hello, I'm <span class="gradient-text">Suraj Bhandari</span></h1>
+                        <p class="hero-intro">
+                            Fueled by curiosity and a deep love for problem-solving, I'm a Data Analyst and Data Scientist dedicated to turning raw numbers into meaningful business decisions.
+                        </p>
+                        <p class="hero-subintro">
+                            From analyzing complex datasets to training predictive models and NLP algorithms, I bridge the gap between raw data and real-world impact. Take a look around my work, and let's connect!
+                        </p>
+                        <div class="hero-actions">
+                            <a href="{{ url_for('projects', category='all') }}" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> View Projects</a>
+                            <a href="{{ url_for('roadmap') }}" class="btn btn-secondary"><i class="fa-solid fa-map"></i> View Roadmap</a>
+                            <a href="#contact" class="btn btn-outline"><i class="fa-regular fa-envelope"></i> Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <div class="image-glow"></div>
+                        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Suraj Bhandari" class="hero-profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Suraj+Bhandari&background=3b82f6&color=fff'">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT ME SECTION -->
+            <section class="home-section anchor-section" id="about">
+                <div class="section-header">
+                    <h2><i class="fa-regular fa-user icon-accent"></i> About Me</h2>
+                    <p>Computer Engineering Undergraduate (CGPA: 8.8) • Problem Solver • Applied ML</p>
+                </div>
+                <div class="about-card">
+                    <p>
+                        I am a Computer Engineering undergraduate (2023–2027) with hands-on project experience spanning <strong>Machine Learning pipelines, full-stack analytics, SQL database architecture</strong>, and <strong>Generative AI</strong>. 
+                        A patient, analytical problem solver adept at statistical hypothesis testing, data governance, and converting complex model outputs into clear, actionable strategic insights.
+                    </p>
+                    <div class="about-stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-num">8.8</div>
+                            <div class="stat-label">B.Tech CGPA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">12+</div>
+                            <div class="stat-label">End-to-End Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">3+</div>
+                            <div class="stat-label">Languages (EN, HI, NE)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">100%</div>
+                            <div class="stat-label">Data-Driven Approach</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TECHNICAL SKILLS SECTION -->
+            <section class="home-section" id="skills">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-code icon-accent"></i> Technical Skills</h2>
+                    <p>A comprehensive overview of my analytical and development toolkit.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-brain"></i> Machine Learning & Stats</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Scikit-Learn</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">SciPy</span>
+                            <span class="skill-tag">Statsmodels</span>
+                            <span class="skill-tag">Hypothesis Testing</span>
+                            <span class="skill-tag">Feature Engineering</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-robot"></i> Generative AI & NLP</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Google Gemini API</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">NLTK</span>
+                            <span class="skill-tag">Gensim</span>
+                            <span class="skill-tag">TextBlob</span>
+                            <span class="skill-tag">Transformers</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-database"></i> Database & SQL Architecture</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL (3NF)</span>
+                            <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">Triggers & Procedures</span>
+                            <span class="skill-tag">Window Functions</span>
+                            <span class="skill-tag">RBAC Security</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-chart-line"></i> Data Visualization & BI</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">DAX Measures</span>
+                            <span class="skill-tag">Plotly</span>
+                            <span class="skill-tag">Seaborn</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Power Query</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-brands fa-python"></i> Programming & Web APIs</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Pydantic</span>
+                            <span class="skill-tag">Streamlit</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-cloud"></i> Cloud & MLOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Microsoft Azure</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">MLflow</span>
+                            <span class="skill-tag">Git & GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPLORE PROJECT CATEGORIES (ON HOME) -->
+            <section class="home-section" id="projects-preview">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-layer-group icon-accent"></i> Project Portfolios</h2>
+                    <p>Select a category to view specialized vertical project showcases.</p>
+                </div>
+                <div class="project-category-hub">
+                    <a href="{{ url_for('projects', category='analytics') }}" class="category-hub-card">
+                        <div class="hub-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3>Data Analytics</h3>
+                        <p>Hospital DB Migration, World Bank ETL Pipeline, Cancer Risk EDA, and Supply Chain Dashboards.</p>
+                        <span class="hub-link">Explore Analytics <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="{{ url_for('projects', category='datascience') }}" class="category-hub-card">
+                        <div class="hub-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Data Science</h3>
+                        <p>Student Mental Health FastAPIs, Clinical Severity Regressors, and NLP Sentiment Pipelines.</p>
+                        <span class="hub-link">Explore Data Science <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="{{ url_for('projects', category='genai') }}" class="category-hub-card">
+                        <div class="hub-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3>GenAI Projects</h3>
+                        <p>Google Gemini AI Movie Engines, Multi-Doc RAG with LangChain, and Autonomous Agents.</p>
+                        <span class="hub-link">Explore GenAI <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="{{ url_for('projects', category='hobby') }}" class="category-hub-card">
+                        <div class="hub-icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <h3>Hobby Projects</h3>
+                        <p>IPL Live Score Predictors, Real-Time Posture Tracking via MediaPipe, and COVID-19 Dashboards.</p>
+                        <span class="hub-link">Explore Hobby Builds <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section class="home-section anchor-section" id="contact">
+                <div class="section-header">
+                    <h2><i class="fa-regular fa-paper-plane icon-accent"></i> Contacts</h2>
+                    <p>Have an opportunity or looking to collaborate? Let's connect!</p>
+                </div>
+                <div class="contact-grid">
+                    <a href="mailto:surajbhandari6731@gmail.com" class="contact-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="contact-type">Email</span>
+                        <span class="contact-val">surajbhandari6731@gmail.com</span>
+                    </a>
+                    <a href="tel:+916283403798" class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="contact-type">Phone</span>
+                        <span class="contact-val">+91 6283403798</span>
+                    </a>
+                    <a href="https://github.com/SurajBhandari7527" target="_blank" class="contact-card">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="contact-type">GitHub</span>
+                        <span class="contact-val">SurajBhandari7527</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/suraj-bhandari-ba7366356" target="_blank" class="contact-card">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span class="contact-type">LinkedIn</span>
+                        <span class="contact-val">Suraj Bhandari</span>
+                    </a>
+                    <div class="contact-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="contact-type">Location</span>
+                        <span class="contact-val">Patiala, Punjab / Kapilvastu, Nepal</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

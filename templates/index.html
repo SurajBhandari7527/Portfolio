@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Portfolio Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sidebar will be injected here -->
+    <!-- Sidebar will be injected here by main.js -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+        <header>
+            <div class="profile">
+                <!-- Replace with your actual photo later -->
+                <img src="https://ui-avatars.com/api/?name=Alex+Chen&background=3b82f6&color=fff" alt="User">
+                <span style="font-size: 0.9rem; font-weight: 500;">Alex Chen</span>
+            </div>
+        </header>
+
+        <div class="roadmap-container" id="main-roadmap">
+            <div class="page-header">
+                <h1>LEARNING ROADMAP</h1>
+                <p>Your path through machine learning, one milestone at a time.</p>
+            </div>
+            <div class="timeline" id="timeline-container">
+                <div style="text-align:center; color: var(--text-muted);">Loading roadmap data...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAILS PANEL OVERLAY (For Sub-topics) -->
+    <div class="details-overlay" id="details-panel">
+        <button class="close-btn" onclick="closeDetails()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="panel-header" id="panel-header">
+            <!-- Header populated dynamically -->
+        </div>
+        <div class="details-content" id="details-content">
+            <!-- Items populated dynamically -->
+        </div>
+    </div>
+
+    <!-- Link to external JS -->
+    <script src="js/main.js"></script>
+    <script src="js/roadmap.js"></script>
+</body>
+</html>

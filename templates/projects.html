@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Bhandari | Project Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    {% include 'sidebar.html' %}
+
+    <div class="main-wrapper">
+        <header>
+            <div class="profile">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" onerror="this.src='https://ui-avatars.com/api/?name=Suraj+Bhandari&background=3b82f6&color=fff'" alt="Suraj Bhandari">
+                <span style="font-size: 0.9rem; font-weight: 500;">Suraj Bhandari</span>
+            </div>
+        </header>
+
+        <div class="scroll-container">
+            <div class="page-header" style="margin-bottom: 35px;">
+                <h1>PROJECT PORTFOLIO</h1>
+                <p>Explore production ML pipelines, statistical modeling, database systems, and AI applications.</p>
+            </div>
+
+            <!-- CATEGORY FILTER BUTTONS -->
+            <div class="category-filter-bar">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-border-all"></i> All Projects
+                </button>
+                <button class="filter-btn" data-filter="analytics">
+                    <i class="fa-solid fa-chart-pie"></i> Data Analytics
+                </button>
+                <button class="filter-btn" data-filter="datascience">
+                    <i class="fa-solid fa-brain"></i> Data Science
+                </button>
+                <button class="filter-btn" data-filter="genai">
+                    <i class="fa-solid fa-robot"></i> GenAI Projects
+                </button>
+                <button class="filter-btn" data-filter="hobby">
+                    <i class="fa-solid fa-gamepad"></i> Hobby Projects
+                </button>
+            </div>
+
+            <!-- VERTICAL RECTANGULAR CARDS GRID -->
+            <div class="vertical-cards-grid" id="projects-grid">
+
+                <!-- 1. DATA ANALYTICS: Cancer Risk -->
+                <div class="v-card" data-category="analytics">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag analytics">Data Analytics</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    </div>
+                    <h3 class="v-card-title">Global Cancer Risk & Statistical Outcome Analysis</h3>
+                    <p class="v-card-desc">
+                        Audited 50,000 clinical records across 15 variables. Ran Kruskal-Wallis statistical tests proving hospital costs (~$52.4K avg) operate independently of survival time (p = 0.923). Trained Random Forest severity regressor (R² = 0.775) isolating Smoking and Genetic Risk.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>Python</span><span>Pandas</span><span>SciPy</span><span>Scikit-Learn</span><span>Seaborn</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527/Global-Cancer-Patient-Data-Analysis-Risk-Severity-Modeling" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. DATA ANALYTICS: World Bank Indicators -->
+                <div class="v-card" data-category="analytics">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag analytics">Data Analytics</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-globe"></i></div>
+                    </div>
+                    <h3 class="v-card-title">World Bank Indicators Automated API Pipeline & Power BI</h3>
+                    <p class="v-card-desc">
+                        Engineered an automated Python ETL pipeline pulling macroeconomic data from the World Bank REST API. Built dynamic DAX measures calculating poverty reduction rates across non-consecutive survey years, discovering diminishing health spending returns above 8–10% GDP.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>Power BI</span><span>DAX</span><span>Python</span><span>REST API</span><span>Power Query</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527/Automated-API-Data-Pipelines-Advanced-Power-BI-Analytics" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. DATA ANALYTICS: Hospital Database -->
+                <div class="v-card" data-category="analytics">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag analytics">Data Analytics</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-database"></i></div>
+                    </div>
+                    <h3 class="v-card-title">Hospital Database Migration & Security Automation</h3>
+                    <p class="v-card-desc">
+                        Migrated 10,000+ unstructured spreadsheet rows into a 3NF relational schema with 0% data redundancy. Engineered BEFORE INSERT triggers eliminating double-booking collisions and implemented RBAC procedures for clinical access control and monthly revenue auditing.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>MySQL (3NF)</span><span>Stored Procedures</span><span>Triggers</span><span>RBAC</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527/Database-Creation-and-Migration" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. DATA ANALYTICS: Inventory App -->
+                <div class="v-card" data-category="analytics">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag analytics">Data Analytics</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    </div>
+                    <h3 class="v-card-title">Interactive Inventory & Supply Chain Web App</h3>
+                    <p class="v-card-desc">
+                        Full-stack live dashboard connected to MySQL tracking suppliers, product inventories, and reorder KPIs. Automated purchase orders with stored procedures and designed real-time low-stock threshold alert triggers with historical movement auditing.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>Python</span><span>Streamlit</span><span>MySQL</span><span>Pandas</span><span>SQL</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527/Inventory_dashboard_and_SQL_Operations" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. DATA SCIENCE: Student Mental Health -->
+                <div class="v-card" data-category="datascience">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag datascience">Data Science</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-brain"></i></div>
+                    </div>
+                    <h3 class="v-card-title">Student Mental Health Predictor (End-to-End ML Pipeline)</h3>
+                    <p class="v-card-desc">
+                        Engineered a leakage-proof pipeline reducing high-cardinality country features by 90% across 111 countries into 11 regional groupings. Optimized Random Forest model, elevating R² from 0.74 to 0.88 and slashing MAE by 35%. Deployed a sub-second REST backend via FastAPI.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>FastAPI</span><span>Scikit-Learn</span><span>Python</span><span>Pydantic</span><span>REST API</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527/Mental-Health-Predictor" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. DATA SCIENCE: Cancer Severity & Noise Audit
+                <div class="v-card" data-category="datascience">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag datascience">Data Science</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-dna"></i></div>
+                    </div>
+                    <h3 class="v-card-title">Clinical Severity Modeling & Noise Quality Audit</h3>
+                    <p class="v-card-desc">
+                        Conducted statistical audits discovering uniform random noise in recorded clinical survival duration (R² = -0.0001), preventing flawed model deployment. Built a Random Forest severity regressor isolating genetic factors and lifestyle habits for clinical risk stratification.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>Python</span><span>Scikit-Learn</span><span>SciPy</span><span>Statsmodels</span><span>Matplotlib</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- 7. DATA SCIENCE: Sentiment Analysis -->
+                <div class="v-card" data-category="datascience">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag datascience">Data Science</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-comments"></i></div>
+                    </div>
+                    <h3 class="v-card-title">NLP Sentiment Analysis using Logistic Regression</h3>
+                    <p class="v-card-desc">
+                        End-to-end natural language processing pipeline performing text normalization, regex cleaning, emoji handling, stopword removal, and TF-IDF vectorization. Trained high-precision classification models for customer review sentiment analysis.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>Python</span><span>NLTK</span><span>Scikit-Learn</span><span>TF-IDF</span><span>NLP</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://www.kaggle.com/code/surajbhandari527/sentiment-analysis-using-logistic-regression" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-kaggle"></i> Kaggle Notebook
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. GENAI: Movie Recommendation Engine -->
+                <div class="v-card" data-category="genai">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag genai">GenAI & LLM</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-film"></i></div>
+                    </div>
+                    <h3 class="v-card-title">AI-Powered Movie Recommendation & Chatbot Engine</h3>
+                    <p class="v-card-desc">
+                        Text-vectorization engine calculating mathematical proximity with Cosine Similarity, returning 8 tailored movie suggestions. Slashed latency by 40% with concurrent.futures asynchronous requests. Integrated Google Gemini LLM with context memory for mood-based curation.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>Python</span><span>Flask</span><span>Google Gemini API</span><span>Cosine Similarity</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527/Movie_Engine-with-Recommendation-system-" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 9. GENAI: Multi-Doc RAG & Conversational Agent -->
+               <div class="v-card" data-category="genai">
+    <div class="v-card-top-accent"></div>
+    <div class="v-card-header">
+        <span class="v-card-tag genai">GenAI & Speech AI</span>
+        <div class="v-card-icon"><i class="fa-solid fa-headset"></i></div>
+    </div>
+    <h3 class="v-card-title">Aero – Voice AI Mock Interview & Revision Platform</h3>
+    <p class="v-card-desc">
+        Desktop revision platform that converts digital and handwritten notes into hierarchical question banks using Gemini Vision and PyMuPDF. Features adaptive, real-time voice mock interviews powered by Whisper STT, Kokoro-ONNX TTS, and multi-round LLM evaluation with direct visual source-page gap attribution.
+    </p>
+    <div class="v-card-tech">
+        <span>FastAPI</span><span>CustomTkinter</span><span>Gemini Vision</span><span>Kokoro-ONNX</span><span>Whisper STT</span><span>PyMuPDF</span>
+    </div>
+    <div class="v-card-footer">
+        <a href="https://github.com/SurajBhandari7527/Learn_from_Notes" target="_blank" class="v-card-btn">
+            <i class="fa-brands fa-github"></i> GitHub Repo
+        </a>
+    </div>
+</div>
+
+                <!-- 10. HOBBY: IPL Match Winner Predictor -->
+                <!-- <div class="v-card" data-category="hobby">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag hobby">Hobby Project</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-baseball-bat-ball"></i></div>
+                    </div>
+                    <h3 class="v-card-title">IPL Cricket Match Winner & Live Score Predictor</h3>
+                    <p class="v-card-desc">
+                        Interactive predictive application analyzing ball-by-ball IPL match data. Computes dynamic win probabilities, required run rate differentials, venue statistics, and team momentum using machine learning classifiers with an intuitive dashboard interface.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>Python</span><span>Streamlit</span><span>Pandas</span><span>Scikit-Learn</span><span>Plotly</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div> -->
+
+
+                <!-- 11. HOBBY: Posture Detection -->
+                <div class="v-card" data-category="hobby">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag hobby">Hobby Project</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-person"></i></div>
+                    </div>
+                    <h3 class="v-card-title">Disease Decoder</h3>
+                    <p class="v-card-desc">
+                        An automated pipeline for disease videos content creation.
+                    </p>
+                    <div class="v-card-tech">
+                        <span>Python</span><span>Gemini API</span><span>PIL</span><span>ffmpeg</span><span>Pollinations API</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="https://github.com/SurajBhandari7527/Disease_Decoder" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo(Private)
+                        </a>
+                    </div>
+                </div>
+
+                
+                <!-- 12. HOBBY: COVID-19 Analytics Dashboard -->
+                <div class="v-card" data-category="hobby">
+                    <div class="v-card-top-accent"></div>
+                    <div class="v-card-header">
+                        <span class="v-card-tag hobby">Hobby Project</span>
+                        <div class="v-card-icon"><i class="fa-solid fa-virus"></i></div>
+                    </div>
+                    <h3 class="v-card-title">Car Rental System</h3>
+                    <p class="v-card-desc">
+A full-stack web application built with Python (Flask) and MySQL to manage vehicle rentals.                    </p>
+                    <div class="v-card-tech">
+                        <span>Python</span><span>Flask</span><span>MySQL</span><span>HTML/CSS</span>
+                    </div>
+                    <div class="v-card-footer">
+                        <a href="" target="_blank" class="v-card-btn">
+                            <i class="fa-brands fa-github"></i> GitHub Repo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT FOR SEAMLESS CLIENT-SIDE FILTERING & URL PARAMS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.v-card');
+            
+            // Determine active category from server-rendered variable or URL query param
+            const activeCategory = "{{ active_category }}" || 'all';
+
+            function applyFilter(category) {
+                // Update button active states
+                filterBtns.forEach(btn => {
+                    if (btn.dataset.filter === category) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+
+                // Show/hide cards with smooth animation
+                cards.forEach(card => {
+                    const cardCat = card.dataset.category;
+                    if (category === 'all' || cardCat === category) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(10px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 200);
+                    }
+                });
+            }
+
+            // Initialize on load
+            applyFilter(activeCategory);
+
+            // Click listener for filter buttons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const cat = btn.dataset.filter;
+                    applyFilter(cat);
+                    window.history.pushState({}, '', `/projects/${cat}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "portfolio_roadmap": {
+    "level_0": {
+      "title": "Python Basics",
+      "description":"The base building",
+      "content":{
+      "Basics of Python": ["Introduction to python", "OOP in python", "Advanced topics (File handling, Exception handling, Decorators)"]
+
+      }  },
+    "levels": [
+      {
+        "id": "A",
+        "title": "Testing the waters",
+        
+        "description": "Introduction to data analytics",
+        "content": {
+          "Data handling and manipulation tools": [ "Numpy", "Pandas"],
+          
+          "Data Visualization": ["Matplotlib", "Seaborn", "Plotly", "PowerBI"],
+          "Data Analysis": ["Descriptive Statistics", "Exploratory data analysis [EDA]"],
+          "Machine Learning Intro": [ "CSV handling", "Introduction to Machine Learning", "Batch Vs Online Machine Learning", "End to End ML project"],
+          "Web frameworks":["Flask","FastAPI"],
+          "Projects": [{"Project Name": "Cancer Patient Data Analysis"}, {"Project Name": "World Health Indicators Dashboard"}]
+        }
+      },
+      {
+        "id": "B",
+        "title": "Gaining conceptual depth",
+        
+        "description": "Learn the core Maths for ML.",
+        "content": {
+          "Foundations": ["Tensors", "Probability Basics", "Independent Events, Conditional Probability", "Bayes Theorem", "Prabability Distributions", "Linear Algebra"],
+          "Advanced Statistics": ["Covariance", "Pearson correlation", "QQ plot", "Confidence level", "Hypothesis Testing", "Chisquare/Anova tests"],
+          "Calculus": ["Limits and Continuity", "Integration and Differentiation", "Maxima/Minima"]
+        }
+      },
+      {
+        "id": "C",
+        "title": "Learn Practical Concepts",
+       
+        "description": "Introduction to the practical side of ML pipeline and Feature Engineering.",
+        "content": {
+          "Data Acquisition": ["Web scraping (Indian Cuisines project)", "Fetch data from API (TMDB project)"],
+          "Data Cleaning": ["Data Accessing", "Handling Dirty Data", "Handling Messy Data"],
+          "Data Preprocessing": ["Missing values (Mean/Median, Arbitrary Value Imputer, Random Imputer, End of Distribution Imputer, KNN Imputer, MICE, etc.)", "Feature Scaling/Normalization", "Encoding (Ordinal, One-Hot, Label, High Cardinality)", "Discretization/Binning(Equal width, Equal frequency, K-means, custom)", "Transformation (Log, Box Cox, Yeo Johnson)", "Handling Time and Date Data"],
+          "Pipeline & Optimization": ["Column Transfer/Sklearn Pipelines", "Handling Outliers (Z-score, IQR proximity rule, Percentile technique)", "Feature Selection (Filter based techniques, Wrapper method, Embedded technique, Hybrid Technique)", "Cross Validation (K-fold, Leave one out, Time series)"]
+        }
+      },
+      {
+        "id":"D",
+        "title":"ML Algorithms and Modeling",
+
+        "description":"Comprehensive study of ML algorithms and modeling techniques.",
+        "content":{
+          "ML Algorithms": ["Linear/Logistic Regression","Regularization", "Regression Metrics","Naive Bayes", "KNN", "Decision Trees/Random Forest", "Boosting (Ada, XGBoost)","SVM", "Classification metrics", "PCA","SVD", "LDA", "Clustering (KMeans, Agglomerative, Divisive, DBSCAN, T-sne)", "Clustering metrics"],
+          "Modeling": ["Stacking & Blending", "Hyperparameter Tuning (Grid/Random Search)", "Handling Imbalanced Data (OverSampling, SMOTE, Undersampling)", "Multicollinearity (VIF)", "Data Leakage"]
+
+        }
+
+      },
+      {
+        "id": "E",
+        "title": "Diving into different domains",
+        
+        "description": "Specialized topics and domain knowledge.",
+        "content": {
+          "SQL": ["DDL","DML", "DQL", "Grouping & Sorting", "Joins", "Subqueries", "Window functions"],
+          "Advanced Domains": ["Recommendation Systems", "Association Rule Learning", "Anomaly Detection(Isolation Tree, DB SCAN, Local Outlier detection)"]
+          
+        }
+      },
+      {
+        "id": "F",
+        "title": "The Modern Approach of ML",
+        
+        "description": "Comprehensive study of Deep Learning and NLP",
+        "content": {
+          "Deep Learning":[
+  "ANN (Perceptron, MLP, Forward Propagation, Backpropagation, Loss Functions, Activation Functions, Regularization, Dropout, Early Stopping, Data Scaling)",
+  "Advanced topics (Vanishing/Exploding Gradient Problem, Gradient Descent Variants, Weight Initialization Techniques, Batch Normalization, Optimizer-SGD, Optimizer-Momentum, Optimizer-NAG, Optimizer-AdaGrad, Optimizer-RMSProp, Optimizer-Adam, Keras Tuner, Hyperparameter Tuning)",
+  "CNN (CNN Intuition, Convolution Operation, Padding, Strides, Pooling, LeNet-5, Backpropagation in CNN, Data Augmentation, Pretrained Models, Transfer Learning, Visualizing Filters)"],
+  "NLP": ["Data Aquisition", "Data Preprocessing(Data cleaning, Lowercase, Remove html tags & urls, Removing Punctuation, Spelling Correction, Removing Stopwords)","Handling emojis(Remove, Replace)", "Tokenization(by words, by sentence)", "Basics of Regular Expression", "NLTK", "Spacy", "Stemming", "Lemmatization", "Text Vectorization (OHE, Bag of Words, Tf-Idf, Word2vec (skipgram), Word 2 vec (C-Bow), Gloves)", "RNN (RNN Architecture, RNN Sentiment Analysis, Types of RNN, Backpropagation Through Time, Problems with RNN, LSTM, GRU, Stacked RNNs, Bidirectional RNN)", "Encoder-Decoder Architecture", "Attention Mechanims(Bahdanau and Luong)", "Self Attention", "Transformers", "BERT" ],
+        
+  "Deep Learning Projects":[{"Project Name": "Movie Recommendation System ", "Code Link": "https://github.com/SurajBhandari7527/Movie_Engine-with-Recommendation-system-"}],
+                    "NLP Projects":[{"Project Name": "Sentiment Analysis ", "Code Link": "https://www.kaggle.com/code/surajbhandari527/sentiment-analysis-using-logistic-regression"}]
+          
+        }
+      },
+
+      {
+        "id": "G",
+        "title": "Pushing it with Projects",
+        
+        "description": "End-to-end project deployment and scaling.",
+        "content": {
+          "Project Portfolio": ["Car/House/Laptop Price Predictors", "Posture detection", "Celebrity matching", "IPL/T20 Predictor", "Titanic/Diabetes/Loan/Gold/Fake News prediction", "Handwriting classifier"],
+          "Deployment": ["Pickling models", "Flask/Streamlit", "Docker", "Cloud (AWS/Azure)", "Android Integration"],
+          "Big Data": ["Out of core ML", "NYC cab Dataset Project"]
+        }
+      }
+    ]
+  }
+}
+

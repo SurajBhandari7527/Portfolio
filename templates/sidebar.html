@@ -1,0 +1,45 @@
+<div class="sidebar">
+    <div class="logo">SURAJ BHANDARI</div>
+    <nav class="nav-items">
+        <!-- Home -->
+        <a href="{{ url_for('home') }}" class="nav-item {% if active_page == 'home' %}active{% endif %}" id="nav-home">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <!-- Roadmap -->
+        <a href="{{ url_for('roadmap') }}" class="nav-item {% if active_page == 'roadmap' %}active{% endif %}" id="nav-roadmap">
+            <i class="fa-solid fa-map"></i> Roadmap
+        </a>
+
+        <!-- Projects Header & Sub-categories -->
+        <div class="nav-group">
+            <a href="{{ url_for('projects', category='all') }}" class="nav-item {% if active_page == 'projects' %}active{% endif %}" id="nav-projects">
+                <i class="fa-solid fa-layer-group"></i> Projects
+            </a>
+            <div class="nav-sub-items">
+                <a href="{{ url_for('projects', category='analytics') }}" class="nav-sub-item {% if active_category == 'analytics' %}active{% endif %}">
+                    <i class="fa-solid fa-chart-pie"></i> Data Analytics
+                </a>
+                <a href="{{ url_for('projects', category='datascience') }}" class="nav-sub-item {% if active_category == 'datascience' %}active{% endif %}">
+                    <i class="fa-solid fa-brain"></i> Data Science
+                </a>
+                <a href="{{ url_for('projects', category='genai') }}" class="nav-sub-item {% if active_category == 'genai' %}active{% endif %}">
+                    <i class="fa-solid fa-robot"></i> GenAI Projects
+                </a>
+                <a href="{{ url_for('projects', category='hobby') }}" class="nav-sub-item {% if active_category == 'hobby' %}active{% endif %}">
+                    <i class="fa-solid fa-gamepad"></i> Hobby Projects
+                </a>
+            </div>
+        </div>
+
+        <!-- About (Redirects to Home #about) -->
+        <a href="{{ url_for('home') }}#about" class="nav-item" id="nav-about">
+            <i class="fa-regular fa-user"></i> About
+        </a>
+
+        <!-- Contacts (Redirects to Home #contact) -->
+        <a href="{{ url_for('home') }}#contact" class="nav-item" id="nav-contact">
+            <i class="fa-regular fa-paper-plane"></i> Contacts
+        </a>
+    </nav>
+</div>
